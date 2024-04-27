@@ -1,13 +1,13 @@
 const width = window.innerWidth
 const height = window.innerHeight
-const barWidth = 1
-const increment = height / (width / barWidth)
-const barCount = Math.floor(width / barWidth)
 
-let mySelect
+let barWidth = 10
+let increment = height / (width / barWidth)
+let barCount = Math.floor(width / barWidth)
+
 /** @type {Array<{value: number, colour: p5.Color}>} */
 let array
-
+let mySelect
 let selectedSort
 
 function setup() {
@@ -44,18 +44,31 @@ function setup() {
 }
 
 function resetAnimation() {
-  array = makeArray(increment, barCount)
-  array = shuffle(array)
   switch (selectedSort) {
     case 'Bubble sort':
+      barWidth = sortingConfig['Bubble Sort']
+      updateAndCreateArray()
       bubbleSort(array)
       break
     case 'Quick Sort':
+      barWidth = sortingConfig['Quick Sort']
+      updateAndCreateArray()
       quickSort(array, 0, array.length - 1)
       break
     default:
       break
   }
+}
+
+function updateDependentVariables() {
+  increment = height / (width / barWidth)
+  barCount = Math.floor(width / barWidth)
+}
+
+function updateAndCreateArray() {
+  updateDependentVariables()
+  array = makeArray(increment, barCount)
+  array = shuffle(array)
 }
 
 function draw() {
