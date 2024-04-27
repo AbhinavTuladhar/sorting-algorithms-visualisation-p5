@@ -23,7 +23,7 @@ function setup() {
 
   const selectOptions = [
     'Cocktail Shaker Sort',
-    'Bubble sort',
+    'Bubble Sort',
     'Heap Sort',
     'Insertion Sort',
     'Odd-even Sort',
@@ -45,7 +45,7 @@ function setup() {
 
 function resetAnimation() {
   switch (selectedSort) {
-    case 'Bubble sort':
+    case 'Bubble Sort':
       barWidth = sortingConfig['Bubble Sort']
       updateAndCreateArray()
       bubbleSort(array)
@@ -54,6 +54,11 @@ function resetAnimation() {
       barWidth = sortingConfig['Quick Sort']
       updateAndCreateArray()
       quickSort(array, 0, array.length - 1)
+      break
+    case 'Heap Sort':
+      barWidth = sortingConfig['Heap Sort']
+      updateAndCreateArray()
+      heapSort(array)
       break
     default:
       break
