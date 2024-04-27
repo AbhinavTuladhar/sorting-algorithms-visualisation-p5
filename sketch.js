@@ -5,6 +5,7 @@ const increment = height / (width / barWidth)
 const barCount = Math.floor(width / barWidth)
 
 let mySelect
+/** @type {Array<{value: number, colour: p5.Color}>} */
 let array
 
 function setup() {
@@ -33,10 +34,10 @@ function setup() {
 
   array = makeArray(increment, barCount)
   array = shuffle(array)
+  quickSort(array, 0, array.length - 1)
 }
 
 function draw() {
   background(20)
-  stroke(255)
   drawLines(array)
 }
