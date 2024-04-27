@@ -42,6 +42,7 @@ async function partition(arr, start, end) {
     }
 
     if (leftPointer <= rightPointer) {
+      await sleep()
       await swap(arr, leftPointer, rightPointer)
       leftPointer++
       rightPointer--

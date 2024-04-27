@@ -35,6 +35,7 @@ function setup() {
   array = makeArray(increment, barCount)
   array = shuffle(array)
   quickSort(array, 0, array.length - 1)
+  // bubbleSort(array)
 }
 
 function draw() {
