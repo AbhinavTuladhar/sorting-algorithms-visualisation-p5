@@ -8,7 +8,7 @@ const sortingConfig = {
   'Insertion Sort': 15,
   'Odd-even Sort': 15,
   'Quick Sort': 1,
-  'LSD Radix Sort': 1,
+  'LSD Radix Sort': 2,
   'Selection Sort': 15,
   'Shell sort': 15,
 }

@@ -60,6 +60,11 @@ function resetAnimation() {
       updateAndCreateArray()
       heapSort(array)
       break
+    case 'LSD Radix Sort':
+      barWidth = sortingConfig['LSD Radix Sort']
+      updateAndCreateArray()
+      radixSort(array, 5)
+      break
     default:
       break
   }
