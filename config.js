@@ -3,7 +3,7 @@
  */
 const sortingConfig = {
   'Bubble Sort': 15,
-  'Cocktail Shaker Sort': 15,
+  'Cocktail Shaker Sort': 10,
   'Heap Sort': 1,
   'Insertion Sort': 15,
   'Odd-even Sort': 15,

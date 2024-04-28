@@ -29,7 +29,7 @@ function setup() {
     'Heap Sort',
     'Quick Sort',
     'LSD Radix Sort',
-    // 'Cocktail Shaker Sort',
+    'Cocktail Shaker Sort',
     'Insertion Sort',
     // 'Odd-even Sort',
     'Selection Sort',
@@ -82,6 +82,11 @@ function resetAnimation() {
       barWidth = sortingConfig['Insertion Sort']
       updateAndCreateArray()
       insertionSort(array)
+      break
+    case 'Cocktail Shaker Sort':
+      barWidth = sortingConfig['Cocktail Shaker Sort']
+      updateAndCreateArray()
+      cocktailSort(array)
       break
     default:
       break
