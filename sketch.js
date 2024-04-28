@@ -26,12 +26,12 @@ function setup() {
   const selectOptions = [
     '-Select a sort-',
     'Bubble Sort',
-    'Heap Sort',
-    'Quick Sort',
-    'LSD Radix Sort',
     'Cocktail Shaker Sort',
+    'Heap Sort',
     'Insertion Sort',
-    // 'Odd-even Sort',
+    'LSD Radix Sort',
+    'Odd-even Sort',
+    'Quick Sort',
     'Selection Sort',
     'Shell Sort',
   ]
@@ -87,6 +87,11 @@ function resetAnimation() {
       barWidth = sortingConfig['Cocktail Shaker Sort']
       updateAndCreateArray()
       cocktailSort(array)
+      break
+    case 'Odd-even Sort':
+      barWidth = sortingConfig['Odd-even Sort']
+      updateAndCreateArray()
+      oddEvenSort(array)
       break
     default:
       break
