@@ -10,7 +10,7 @@ let array
 let mySelect
 let selectedSort
 
-alert('Use landscape mode for best results!')
+// alert('Use landscape mode for best results!')
 
 function setup() {
   mySelect = createSelect()
@@ -30,7 +30,7 @@ function setup() {
     'Quick Sort',
     'LSD Radix Sort',
     // 'Cocktail Shaker Sort',
-    // 'Insertion Sort',
+    'Insertion Sort',
     // 'Odd-even Sort',
     'Selection Sort',
     'Shell Sort',
@@ -77,6 +77,11 @@ function resetAnimation() {
       barWidth = sortingConfig['Selection Sort']
       updateAndCreateArray()
       selectionSort(array)
+      break
+    case 'Insertion Sort':
+      barWidth = sortingConfig['Insertion Sort']
+      updateAndCreateArray()
+      insertionSort(array)
       break
     default:
       break
