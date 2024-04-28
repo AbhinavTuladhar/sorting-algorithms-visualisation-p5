@@ -30,6 +30,7 @@ function setup() {
     'Heap Sort',
     'Insertion Sort',
     'LSD Radix Sort',
+    'Merge Sort',
     'Odd-even Sort',
     'Quick Sort',
     'Selection Sort',
@@ -92,6 +93,11 @@ function resetAnimation() {
       barWidth = sortingConfig['Odd-even Sort']
       updateAndCreateArray()
       oddEvenSort(array)
+      break
+    case 'Merge Sort':
+      barWidth = 5
+      updateAndCreateArray()
+      mergeSort(array)
       break
     default:
       break
