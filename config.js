@@ -10,5 +10,5 @@ const sortingConfig = {
   'Quick Sort': 1,
   'LSD Radix Sort': 2,
   'Selection Sort': 15,
-  'Shell sort': 15,
+  'Shell Sort': 4,
 }

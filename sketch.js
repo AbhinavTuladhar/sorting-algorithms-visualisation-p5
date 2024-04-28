@@ -1,7 +1,7 @@
 const width = window.innerWidth
 const height = window.innerHeight
 
-let barWidth = 10
+let barWidth = 2
 let increment = height / (width / barWidth)
 let barCount = Math.floor(width / barWidth)
 
@@ -22,15 +22,16 @@ function setup() {
   })
 
   const selectOptions = [
-    'Cocktail Shaker Sort',
+    '-Select a sort-',
     'Bubble Sort',
     'Heap Sort',
-    'Insertion Sort',
-    'Odd-even Sort',
     'Quick Sort',
     'LSD Radix Sort',
-    'Selection Sort',
-    'Shell sort',
+    // 'Cocktail Shaker Sort',
+    // 'Insertion Sort',
+    // 'Odd-even Sort',
+    // 'Selection Sort',
+    'Shell Sort',
   ]
 
   selectOptions.forEach((option) => {
@@ -63,7 +64,12 @@ function resetAnimation() {
     case 'LSD Radix Sort':
       barWidth = sortingConfig['LSD Radix Sort']
       updateAndCreateArray()
-      radixSort(array, 5)
+      radixSort(array, 8)
+      break
+    case 'Shell Sort':
+      barWidth = sortingConfig['Shell Sort']
+      updateAndCreateArray()
+      shellSort(array)
       break
     default:
       break
