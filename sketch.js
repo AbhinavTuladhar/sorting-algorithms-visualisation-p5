@@ -8,18 +8,27 @@ let barCount = Math.floor(width / barWidth)
 /** @type {Array<{value: number, colour: p5.Color}>} */
 let array
 let mySelect
+let barsSelect
 let selectedSort
+let drawingType = 'Regular'
 
 // alert('Use landscape mode for best results!')
 
 function setup() {
   mySelect = createSelect()
+  barsSelect = createSelect()
 
-  mySelect.position(windowWidth / 2 - 100, 10)
+  mySelect.position(windowWidth / 2 - 75, 10)
+  barsSelect.position(windowWidth / 2 + 75, 10)
   mySelect.addClass('selector')
 
   mySelect.changed(() => {
     selectedSort = mySelect.value()
+    resetAnimation()
+  })
+
+  barsSelect.changed(() => {
+    drawingType = barsSelect.value()
     resetAnimation()
   })
 
@@ -40,6 +49,9 @@ function setup() {
   selectOptions.forEach((option) => {
     mySelect.option(option)
   })
+
+  barsSelect.option('Regular')
+  barsSelect.option('Pyramid')
 
   createCanvas(windowWidth, windowHeight)
 
@@ -117,5 +129,5 @@ function updateAndCreateArray() {
 
 function draw() {
   background(20)
-  drawLines(array)
+  drawLines(array, drawingType)
 }
