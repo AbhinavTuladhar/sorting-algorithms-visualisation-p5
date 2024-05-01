@@ -10,10 +10,8 @@ const drawLines = (array, drawingType) => {
     const { value, colour } = obj
     fill(colour)
     if (drawingType === 'Pyramid') {
-      push()
-      translate(0, windowHeight / 2 - value / 2)
-      rect(index * barWidth, 0, barWidth, value)
-      pop()
+      const yOffset = windowHeight / 2 - value / 2
+      rect(index * barWidth, yOffset, barWidth, value)
     } else {
       rect(index * barWidth, height - value, barWidth, value)
     }
