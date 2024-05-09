@@ -138,7 +138,7 @@ function resetAnimation() {
       oddEvenSort(array)
       break
     case 'Merge Sort':
-      barWidth = 5
+      barWidth = sortingConfig['Merge Sort']
       radixSelect.position(-100, -100)
       updateAndCreateArray()
       mergeSort(array)
